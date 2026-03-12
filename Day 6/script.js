@@ -12,6 +12,10 @@ async function checkwheather(city) {
     document.querySelector('.temperature').innerHTML=Math.round(data.main.temp)+'°C';
     document.querySelector('.humidityValue').innerHTML=data.main.humidity+'%';
     document.querySelector('.speedValue').innerHTML=data.wind.speed+'km/h';
+    document.querySelector('.temp img').innerHTML.src="assets/'+data.wheather[0].main.toLowerCase()+'.png';
 
-    
 }
+searchBtn.addEventListener('Click',()=>{
+    checkweather(searchBox.value);
+})
+    
